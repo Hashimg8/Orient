@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 :root {
-    --main-color: #10cab7;
+    /* --main-color: #10cab7; */
+    --main-color:#2E86C1;
     --secondary-color: #2c4755;
     --section-padding: 60px;
     --section-background: #f6f6f6;
@@ -17,8 +18,14 @@
 }
 /* ===================nav bar=========================== */
 header{
+    height: 100vh;
+    background-image: url(../Image/landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.nav{
     width: 100%;
-    background: #ffffff;
     backdrop-filter: blur(5px);
     border-bottom: 2px solid #ccc;
     position: fixed;
@@ -29,11 +36,38 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+    position: relative;
 }
 .nav-bar img{
     width: 100px;
 }
 /* =====================menu=================================== */
+.menu-toggle{
+    display: none;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: .4s ease;
+    display: none;
+}
+.links span{
+    width: 25px;
+    height: 3px;
+    background-color: #2E86C1;
+}
+.menu-toggle:checked ~.links span:nth-child(1){
+    transform: translateY(17px) rotate(45deg);
+}
+.menu-toggle:checked ~ .links span:nth-child(2){
+    opacity: 0;
+}
+.menu-toggle:checked ~ .links span:nth-child(3){
+        transform: translateY(0px) rotate(-45deg);
+}
 .menu{
     display: flex;
     gap: 30px;
@@ -45,6 +79,7 @@ header{
     display: block;
     text-decoration: none;
     text-transform: capitalize;
+
     font-size: 19px;
     color: var(--secondary-color);
     padding: 10px 15px;
@@ -70,12 +105,7 @@ header{
 /* ============================================================== */
 .section-hero{
     padding-top: 120px;
-    height: 100vh;
-    background-image: url(/Image/landing.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    background-attachment: scroll;
+   
 }
 .hero{
    text-align: center;
@@ -220,13 +250,30 @@ h4 + p{
         margin: 0;
     }
     /* nav bar */
-    .nav-bar{
+    /* .nav-bar{
         flex-direction: column;
         justify-content: center;
         gap: 25px;
+    } */
+    .links{
+        display: flex;
     }
     .menu{
-        gap: 10px;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: #d2d8db;
+        padding: 0;
+        margin: 0;
+        transition: .4s ease-in-out;
+    }
+    .menu li{
+        text-align: center;
+    }
+    .menu-toggle:checked ~ .menu{
+        left: 0;
     }
     /*  */
     .hero{
@@ -255,6 +302,9 @@ h4 + p{
         text-align: center;
         gap:15px;
     }
+}
+@media{
+
 }
 
 

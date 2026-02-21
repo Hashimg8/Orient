@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +14,33 @@
 <body>
     <!-- nav bar -->
     <header>
-        <nav class="nav-bar container">
-            <img src="Image/logo.png" alt="">
+        <div class="nav">
+            <nav class="nav-bar container">
+            <img src="Image/logo-nav.png" alt="">
         <!-- menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
             <ul class="menu">
-                <li><a href="">services</a></li>
-                <li><a href="">projects</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="">عنا</a></li>
+                <li><a href="">الخدمات</a></li>
+                <li><a href="">المشاريع</a></li>
+                <li><a href="">التواصل</a></li>
             </ul>
-           
           </nav> 
-    </header>
-    <!-- section hero -->
-    <section class="section-hero">
+        </div>
+        <!-- section hero -->
+        <section class="section-hero">
         <div class="hero container">
-            <h1>Hello There</h1>
-            <p class="desc">We are Leon - Super Creative & <br> Minimal Agency Web Template</p>
+            <h1>أهلا بك</h1>
+            <p class="desc"> نحن هايبر -  <br>قالب موقع إلكتروني لوكالة إبداعية وبسيطة للغاية</p>
         </div>
     </section>
+    </header>
+    
     <!-- -==============================================- -->
     <main>
     <!--  -->
@@ -40,20 +48,26 @@
         <div class="box-about container">
             <div class="card">
                 <i class="fa-solid fa-globe"></i>
-                <h3>Your Product is Worldwide</h3>
-                <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut lab</p>
+                <h3>منتجك متوفر عالمياً</h3>
+                <p class="desc">
+                    نحن نؤمن بأن الإبداع لا يعرف حدودا.نقدم خدماتنا لعملائنا في جميع أنحاء العالم،مع ضمانجودة لا تضاهي المعايير الدولية لناسب طموحك أينما كنت.
+                </p>
             </div>
             <!-- 2 -->
             <div class="card">
-                <i class="fa-solid fa-globe"></i>
-                <h3>Your Product is Worldwide</h3>
-                <p class="desc">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut lab</p>
+                <i class="far fa-gem fa-3x"></i>
+                <h3>سنقوم بكل العمل</h3>
+                <p class="desc">
+                    الجودة هي جور مانقوم بة.فريقنا المتخصص يهتم بأدق التفاصيل ليقدم لك منتجا نهائيا يتسم بالرقي و المتانة،مما يمنح مشروعك قيمة مضافة تدوم طويلا
+                </p>
             </div>
             <!-- 3 -->
             <div class="card">
-                <i class="fa-solid fa-globe"></i>
-                <h3>Your Product is Worldwide</h3>
-                <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit, sed dob <br> eiusmod tempor incididunt ut lab</p>
+                <i class="fas fa-magic fa-3x"></i>
+                <h3>أخبرنا بفكرتك</h3>
+                <p class="desc">
+                    حول خيالك إلي واقع ملموس.نحن هنا لنستمع لأفكارك المبتكرة ونحولها إلي حلول برمجية وتصميمات إبداعية تلمس إحتياجات جمهورك المستهدف بذكاء
+                </p>
             </div>
         </div>
     </section>
